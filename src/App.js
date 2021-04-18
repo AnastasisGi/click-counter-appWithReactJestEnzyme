@@ -3,7 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div> 
+    <div data-test="component-app"> 
+
+    <button data-test='increment-button'>Increment button</button>
+    <h1 data-test="counter-display">The counter is</h1>
+    
     </div>
   );
 }
