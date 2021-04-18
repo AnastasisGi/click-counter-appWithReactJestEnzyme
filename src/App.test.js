@@ -33,4 +33,9 @@ const counterDisplay = findByTestAttr(wrapper,'counter-display')
 expect(counterDisplay.length).toBe(1)
 });
 
+test('counter starts at 0', () => {
+  const wrapper=setup();
+  const count = findByTestAttr(wrapper,'count').text();  
+  expect(count).toEqual("0")
+})
 
