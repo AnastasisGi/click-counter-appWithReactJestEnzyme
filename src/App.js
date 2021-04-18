@@ -10,12 +10,15 @@ function App() {
   return (
     <div data-test="component-app"> 
 
-    <button data-test='increment-button'>Increment button</button>
     <h1 data-test="counter-display">
-      The counter is&nbsp
+      The counter is&nbsp;
       <span data-test="count">{count}</span>
     </h1>
     
+    <button 
+    data-test='increment-button'
+    onClick={()=> setCount(count+1)}
+    >Increment button</button>
     </div>
   );
 }

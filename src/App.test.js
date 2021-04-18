@@ -39,3 +39,11 @@ test('counter starts at 0', () => {
   expect(count).toEqual("0")
 })
 
+test('should increment the value on the display when clicking the button', () => {
+const wrapper = setup();
+const button=findByTestAttr(wrapper,'increment-button');
+button.simulate('click');
+const count = findByTestAttr(wrapper,'count').text();  
+expect(count).toEqual('1')
+  
+})
